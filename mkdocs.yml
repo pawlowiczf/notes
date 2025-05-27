@@ -50,7 +50,7 @@
 #   - stylesheets/extra.css
 
 site_name: University notes
-site_url: https://pawlowiczf.github.io/documentation-notes-site/
+site_url: https://github.com/pawlowiczf/documentation-notes-site
 
 theme:
   name: material
