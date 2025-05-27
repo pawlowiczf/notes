@@ -50,6 +50,9 @@
 #   - stylesheets/extra.css
 
 site_name: University notes
+site_author: pawlowiczf
+site_description: >-
+  Notes
 
 repo_name: documentation-notes-site
 repo_url: https://github.com/pawlowiczf/documentation-notes-site
@@ -104,8 +107,39 @@ markdown_extensions:
   - md_in_html
 
 nav:
-  - Strona główna: index.md
-  - gRPC in Go/Java: grpc-go-java/index.md
+  - Main page: index.md
+  - gRPC in Go/Java: 
+    - gRPC setup in Go: grpc-go-java/notes1.md
+    - gRPC setup in Java: grpc-go-java/notes2.md
+    - Serialization - Go: grpc-go-java/notes3.md
+    - Serialization - Java: grpc-go-java/notes4.md
+    - Unary RPC - Go: grpc-go-java/notes5.md
+    - Unary RPC - Java: grpc-go-java/notes6.md
+
+  - Java/Spring/Hibernate:
+    - Main: java-hibernate-spring/index.md
+    - Databases: 
+        - Content: java-hibernate-spring/db/index.md
+        - Basic database operations/connections:: java-hibernate-spring/db/notes1.md
+        - Hibernate: java-hibernate-spring/db/notes2.md
+        - Transactions: java-hibernate-spring/db/notes3.md
+    - Spring: 
+        - Content: java-hibernate-spring/spring/index.md
+        - Spring Boot: java-hibernate-spring/spring/spring_boot.md 
+        - Spring Core: java-hibernate-spring/spring/spring_core.md 
+        - Spring Hibernate: java-hibernate-spring/spring//spring_hibernate.md 
+        - Spring REST: java-hibernate-spring/spring/spring_rest.md 
+        - Spring Exceptions: java-hibernate-spring/spring/4_spring_exceptions.md
+        - Spring REST Data: java-hibernate-spring/spring/5_spring_rest_data.md 
+    - Spring security:
+        - Content: java-hibernate-spring/spring-security/index.md
+        - Spring Security Start: java-hibernate-spring/spring-security/1_spring_security.md
+
+  - Go:
+    - Main: go/index.md
+    - Basics:
+      - Content: go/basics/index.md
+      - Net/HTTP: go/basics/1_net_http.md
 
 extra_css:
   - stylesheets/extra.css

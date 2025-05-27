@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# Hejka hejka 
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
@@ -9,15 +9,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 * `mkdocs build` - Build the documentation site.
 * `mkdocs -h` - Print help message and exit.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-
-
-
+## To dla mnie ściąga: 
 {==
 
 Formatting can also be applied to blocks by putting the opening and closing
