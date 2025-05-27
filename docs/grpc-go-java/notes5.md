@@ -1,6 +1,9 @@
 ---
 title: Unary RPC - Go
+# hide:
+#   - toc
 ---
+
 ## Tworzenie interfejsu serwera i klienta 
 
 Tworzymy serwis RPC w pliku np. `laptop_service.proto`:

@@ -1,0 +1,9 @@
+/* Zwiększenie szerokości treści */
+.md-main__inner {
+    max-width: 100% !important;
+}
+
+/* Zmniejszenie marginesów wewnętrznych */
+.md-content {
+    padding: 2rem 3rem; /* góra/dół, lewo/prawo */
+}

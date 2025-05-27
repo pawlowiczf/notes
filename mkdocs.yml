@@ -1,0 +1,107 @@
+# site_name: University notes 
+# theme:
+#   name: material
+
+
+
+#   font:
+#     text: Roboto
+#     code: Roboto Mono
+
+#   features:
+#     - content.tooltips
+#     #- navigation.sections
+#     - navigation.tabs
+#     - navigation.top
+#     - navigation.footer
+#     - navigation.indexes
+#     - navigation.tracking
+#     #- navigation.expand
+#     - navigation.path  
+#     - toc.follow
+#     - search.suggest
+#     - search.highlight
+#     - search.share
+#     - content.tabs.link
+#     - content.code.annotate
+#     - content.code.copy
+#     - content.footnote.tooltips
+
+# markdown_extensions:
+#   - footnotes
+#   - pymdownx.highlight:
+#       anchor_linenums: true
+#       line_spans: __span
+#       pygments_lang_class: true
+#   - pymdownx.inlinehilite
+#   - pymdownx.snippets
+#   - pymdownx.superfences
+#   - attr_list
+#   - md_in_html
+#   - attr_list
+#   - md_in_html
+  
+
+# # nav:
+# #   - Strona główna: index.md
+# #   - gRPC in Go/Java: grpc-go-java
+
+# extra_css:
+#   - stylesheets/extra.css
+
+site_name: University notes
+
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - content.tooltips
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.path  
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - content.footnote.tooltips
+
+markdown_extensions:
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji
+  - pymdownx.keys
+  - pymdownx.tasklist
+  - pymdownx.smartsymbols
+  - attr_list
+  - md_in_html
+
+nav:
+  - Strona główna: index.md
+  - gRPC in Go/Java: grpc-go-java/index.md
+
+extra_css:
+  - stylesheets/extra.css
