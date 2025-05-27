@@ -57,4 +57,4 @@ Lorem ipsum[^1] dolor sit amet, consectetur adipiscing elit.[^2]
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
 
-<!-- info, tip, success, question, warning, failure, danger, bug, example, quote,  -->
+<!-- info, tip, success, question, warning, failure, danger, bug, example, quote,  -->1
