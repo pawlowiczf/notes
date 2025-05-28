@@ -120,7 +120,7 @@ nav:
     - Main: java-hibernate-spring/index.md
     - Databases: 
         - Content: java-hibernate-spring/db/index.md
-        - Basic database operations/connections:: java-hibernate-spring/db/notes1.md
+        - Basic database operations/connections: java-hibernate-spring/db/notes1.md
         - Hibernate: java-hibernate-spring/db/notes2.md
         - Transactions: java-hibernate-spring/db/notes3.md
     - Spring: 
@@ -140,6 +140,10 @@ nav:
     - Basics:
       - Content: go/basics/index.md
       - Net/HTTP: go/basics/1_net_http.md
+  - Rust:
+    - Main: rust/index.md 
+    - Basics:
+      - Ownership: rust/basics/notes1.md
 
 extra_css:
   - stylesheets/extra.css
