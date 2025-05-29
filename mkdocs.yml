@@ -107,7 +107,7 @@ markdown_extensions:
   - md_in_html
 
 nav:
-  - Main page: index.md
+  - "": index.md
   - gRPC in Go/Java: 
     - gRPC setup in Go: grpc-go-java/notes1.md
     - gRPC setup in Java: grpc-go-java/notes2.md
@@ -144,6 +144,7 @@ nav:
     - Main: rust/index.md 
     - Basics:
       - Ownership: rust/basics/notes1.md
+      - Object oriented programming: rust/basics/notes2.md
 
 extra_css:
   - stylesheets/extra.css
