@@ -53,6 +53,15 @@ impl Spaceship {
 let ship = Spaceship::spawn("Destroyer".to_string());
 ```
 
+!!! note tip "Kopiowanie struktur" 
+    Możliwe jest tworzenie innej instacji struktury, na podstawie aktualnej. Przykładowo:
+    ```rust 
+    let r2 = Rectangle {x: 3.0, ..r1};
+    ```
+    gdzie `r1` to także struktura `Rectangle`.
+
+    W przypadku typów, które implementują cechę `Copy`, wartość jest kopiowana, ale np. dla `String`, mamy do czynienia z **przeniesieniem własności**. 
+
 ## Cechy (traits)
 Cechy to takie interfejsy. Dodają warstwę abstrakcji nad strukturami. Tworzenie i implementacja wygląda następująco:
 
