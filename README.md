@@ -1,1 +1,1 @@
-Link: [pawlowiczf.github.io/notes](pawlowiczf.github.io/notes)
+Link: [https://pawlowiczf.github.io/notes](https://pawlowiczf.github.io/notes)
