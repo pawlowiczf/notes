@@ -146,5 +146,9 @@ nav:
       - Ownership: rust/basics/notes1.md
       - Object oriented programming: rust/basics/notes2.md
 
+  - DevOps:
+    - Main: devops/index.md 
+    - Jenkins:
+      - Basic configuration: devops/jenkins/notes1.md 
 extra_css:
   - stylesheets/extra.css
