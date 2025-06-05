@@ -150,5 +150,7 @@ nav:
     - Main: devops/index.md 
     - Jenkins:
       - Basic configuration: devops/jenkins/notes1.md 
+  - Network:
+    - Main: network/index.md
 extra_css:
   - stylesheets/extra.css
