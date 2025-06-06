@@ -16,6 +16,22 @@ sudo passwd root
 ## Instalacja 
 Zawsze najpierw zainstaluj SDK Java, następnie Jenkinsa. Instrukcja krok po kroku: `https://www.jenkins.io/doc/book/installing/linux/`
 
+## Instalacja na lekkich obrazach w Docker 
+```sh
+docker network create --driver bridge --subnet 172.25.0.0/24 jenkins-network 
+
+docker run -dit --name jenkins-server-1 --network jenkins-network --ip 172.25.0.2 -p 2222:22 ubuntu:22.04
+docker run -dit --name jenkins-agent-1  --network jenkins-network --ip 172.25.0.3 -p 2223:22 ubuntu:22.04
+
+docker exec -it jenkins-server-1 bash
+    apt update
+    apt install openssh-server
+    service ssh start
+    passwd
+
+ssh root@localhost -p 2222
+```
+
 ## Konfiguracja agenta i połączenia przez SSH
 Konfiguracja agenta i połączenie przez SSH (wraz z walidacją `known hosts`) składa się z kilku kroków, które trzeba wykonywać na odpowiednich maszynach!
 

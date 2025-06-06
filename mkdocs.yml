@@ -108,6 +108,7 @@ markdown_extensions:
 
 nav:
   - "": index.md
+
   - gRPC in Go/Java: 
     - gRPC setup in Go: grpc-go-java/notes1.md
     - gRPC setup in Java: grpc-go-java/notes2.md
@@ -117,7 +118,7 @@ nav:
     - Unary RPC - Java: grpc-go-java/notes6.md
 
   - Java/Spring/Hibernate:
-    - Main: java-hibernate-spring/index.md
+    - Java/Spring/Hibernate: java-hibernate-spring/index.md
     - Databases: 
         - Content: java-hibernate-spring/db/index.md
         - Basic database operations/connections: java-hibernate-spring/db/notes1.md
@@ -136,21 +137,24 @@ nav:
         - Spring Security Start: java-hibernate-spring/spring-security/1_spring_security.md
 
   - Go:
-    - Main: go/index.md
+    - Go: go/index.md
     - Basics:
       - Content: go/basics/index.md
       - Net/HTTP: go/basics/1_net_http.md
   - Rust:
-    - Main: rust/index.md 
+    - Rust: rust/index.md 
     - Basics:
       - Ownership: rust/basics/notes1.md
       - Object oriented programming: rust/basics/notes2.md
-
+      - Generics/Pointers: rust/basics/notes3.md 
+      - Lifespan: rust/basics/notes4.md
+      - Enums: rust/basics/notes5.md 
   - DevOps:
-    - Main: devops/index.md 
+    - DevOps: devops/index.md 
     - Jenkins:
       - Basic configuration: devops/jenkins/notes1.md 
   - Network:
-    - Main: network/index.md
+    - Network: network/index.md
+    
 extra_css:
   - stylesheets/extra.css

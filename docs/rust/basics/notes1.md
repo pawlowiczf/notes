@@ -57,3 +57,6 @@ W dowolnym momencie możemy mieć tylko jedną z poniższych sytuacji:
 
 !!! note info ""
     Nie możemy mieć jednocześnie referencji mutowalnej i niemutowalnej, ani wielu referencji mutowalnych. 
+
+!!! danger "Uwaga"
+    Jeśli dana struktura implementuje interfejs `Copy` to mimo, że przekazujemy ją np. do funkcji (bez pożyczki), to nie następuje przeniesienie własności.
