@@ -149,6 +149,9 @@ nav:
       - Generics/Pointers: rust/basics/notes3.md 
       - Lifespan: rust/basics/notes4.md
       - Enums: rust/basics/notes5.md 
+      - Error handling: rust/basics/notes6.md
+      - Collections: rust/basics/notes7.md 
+      
   - DevOps:
     - DevOps: devops/index.md 
     - Jenkins:

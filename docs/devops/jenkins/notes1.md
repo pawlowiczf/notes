@@ -17,6 +17,8 @@ sudo passwd root
 Zawsze najpierw zainstaluj SDK Java, następnie Jenkinsa. Instrukcja krok po kroku: `https://www.jenkins.io/doc/book/installing/linux/`
 
 ## Instalacja na lekkich obrazach w Docker 
+Nie używa się obrazów ubuntu, lecz gotowych obrazów `jenkins:lts`.
+
 ```sh
 docker network create --driver bridge --subnet 172.25.0.0/24 jenkins-network 
 
