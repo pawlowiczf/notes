@@ -158,6 +158,12 @@ nav:
       - Basic configuration: devops/jenkins/notes1.md 
   - Network:
     - Network: network/index.md
-    
+    - Firewalls: network/bsk/notes1.md 
+    - Private vlans/HSRP: network/bsk/notes2.md 
+    - GLBP: network/bsk/notes3.md
+    - Remote access: network/bsk/notes4.md
+  
+  - Erlang:
+    - OTP: erlang/otp/notes1.md 
 extra_css:
   - stylesheets/extra.css
