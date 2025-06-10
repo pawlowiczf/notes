@@ -162,6 +162,7 @@ nav:
     - Private vlans/HSRP: network/bsk/notes2.md 
     - GLBP: network/bsk/notes3.md
     - Remote access: network/bsk/notes4.md
+    - Other: network/bsk/notes5.md
   
   - Erlang:
     - OTP: erlang/otp/notes1.md 
