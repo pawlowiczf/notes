@@ -156,6 +156,8 @@ nav:
     - DevOps: devops/index.md 
     - Jenkins:
       - Basic configuration: devops/jenkins/notes1.md 
+    - Kubernetes:
+      - Basic commands: devops/kubernetes/notes1.md
   - Network:
     - Network: network/index.md
     - Firewalls: network/bsk/notes1.md 
@@ -166,5 +168,8 @@ nav:
   
   - Erlang:
     - OTP: erlang/otp/notes1.md 
+
+  - Distributed Systems:
+    - Kafka: distributed-systems/kafka/notes1.md 
 extra_css:
   - stylesheets/extra.css
