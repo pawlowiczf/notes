@@ -124,6 +124,7 @@ nav:
         - Basic database operations/connections: java-hibernate-spring/db/notes1.md
         - Hibernate: java-hibernate-spring/db/notes2.md
         - Transactions: java-hibernate-spring/db/notes3.md
+        - H2 database: java-hibernate-spring/db/notes4.md
     - Spring: 
         - Content: java-hibernate-spring/spring/index.md
         - Spring Boot: java-hibernate-spring/spring/spring_boot.md 

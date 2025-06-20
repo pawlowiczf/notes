@@ -38,3 +38,14 @@ Gdy potrzebujemy obsługiwać błąd dla wielu kontrolerów, możemy stworzyć g
 public class StudentRestExceptionHandler {}
 ```
 
+## Obsługa błędów przy walidacji 
+W przypadku używania adnotacji np. `@NotBlank, @NotEmpty(message = ...), @Min`, jeśli zapytanie nie spełnia wymagań, zostanie rzucony błąd: 
+
+1. `MethodArgumentNotValidException` - dla ciała żadania z adnotacją `@RequestBody`
+2. `ConstraintViolationException` - dla parametrów z walidacją na poziomie metod lub query params. 
+
+Trzeba je przechwywić w globalnym handlerze wyjątków. Przykładowo:
+```java
+@ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorResponse> handleValidationExceptions(MethodArgumentNotValidException ex) {}
+```
