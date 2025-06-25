@@ -133,6 +133,7 @@ nav:
         - Spring REST: java-hibernate-spring/spring/spring_rest.md 
         - Spring Exceptions: java-hibernate-spring/spring/4_spring_exceptions.md
         - Spring REST Data: java-hibernate-spring/spring/5_spring_rest_data.md 
+        - Swagger: java-hibernate-spring/spring/6_swagger.md
     - Spring security:
         - Content: java-hibernate-spring/spring-security/index.md
         - Spring Security Start: java-hibernate-spring/spring-security/1_spring_security.md
@@ -157,8 +158,11 @@ nav:
     - DevOps: devops/index.md 
     - Jenkins:
       - Basic configuration: devops/jenkins/notes1.md 
+    - Docker:
+      - Basics: devops/docker/notes1.md      
     - Kubernetes:
       - Basic commands: devops/kubernetes/notes1.md
+
   - Network:
     - Network: network/index.md
     - Firewalls: network/bsk/notes1.md 

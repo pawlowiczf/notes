@@ -17,6 +17,7 @@ public Student getStudent(@PathVariable int studentID) {}
 
 ## Wyjątki, błędy
 W celu złapania i przesłania błędu, jako odpowiedzi należy:
+
 - Zdefiniować własną klasę z odpowiedzią (np. zawiera pola status code, message), wraz getterami, setterami 
 - Zdefiniować własny wyjątek, np. `StudentNotFoundException` (dziedziczy po RuntimeException)
 - Poinformować kontroler REST, by dany błąd rozstrzygał w określony sposób. 
