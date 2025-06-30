@@ -1,4 +1,3 @@
-## Tworzenie pliku Dockerfile 
 
 ### Podstawowe elementy tworzenia pliku 
 
@@ -54,3 +53,9 @@ CMD ["java", "-jar", "app.jar"]
 
 `https://www.docker.com/blog/docker-best-practices-choosing-between-run-cmd-and-entrypoint/`
 
+### Budowanie i pushowanie 
+Zbudujemy obraz i dodamy go do zdalnego rejestru na DockerHub:
+```sh 
+docker build -t username/repo:tag backend/Dockerfile 
+docker image push docker.io/username/repo:tag 
+```

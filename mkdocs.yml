@@ -159,7 +159,8 @@ nav:
     - Jenkins:
       - Basic configuration: devops/jenkins/notes1.md 
     - Docker:
-      - Basics: devops/docker/notes1.md      
+      - Basics: devops/docker/notes1.md 
+      - Docker Compose : devops/docker/notes2.md     
     - Kubernetes:
       - Basic commands: devops/kubernetes/notes1.md
 

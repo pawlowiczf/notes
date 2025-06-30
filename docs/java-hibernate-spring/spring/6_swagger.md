@@ -1,6 +1,6 @@
 ## Dokumentacja API
 
-Skorzystamy z biblioteki `OpenAPI`. Dodaj odpowiednie zależności do pliku z dependencjami. Dokumentacja jest dostępna pod adresem: `localhost:8080/swagger-ui/inidex.html`
+Skorzystamy z biblioteki `OpenAPI`. Dodaj odpowiednie zależności do pliku z dependencjami. Dokumentacja jest dostępna pod adresem: `localhost:8080/swagger-ui/index.html`
 
 ### Informacje ogólne o aplikacji 
 W głównej klasie (w której zawarta jest metoda `main`) umieszczamy adnotację:
