@@ -174,12 +174,13 @@ nav:
   
   - Erlang:
     - OTP: erlang/otp/notes1.md 
-    - Problem: erlang/otp/notes2.md
+    - 1: erlang/otp/notes2.md
 
   - Scala:
     - "": scala/index.md
     - Advanced concepts:
       - Syntax sugar: scala/advanced/notes1.md 
+      - Pattern Matching: scala/advanced/notes2.md
 
   - Distributed Systems:
     - Kafka: distributed-systems/kafka/notes1.md 
