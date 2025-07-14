@@ -174,6 +174,7 @@ nav:
   
   - Erlang:
     - OTP: erlang/otp/notes1.md 
+    - Problem: erlang/otp/notes2.md
 
   - Scala:
     - "": scala/index.md
