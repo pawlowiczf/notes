@@ -6,7 +6,8 @@ Przykładowy supervisor:
 init(_) ->
     SupFlags = #{
         strategy => one_for_one,
-        intensity => 2
+        intensity => 2,
+        period => 10
     },
 
     ChildSpec = #{
