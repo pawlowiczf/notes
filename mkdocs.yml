@@ -181,7 +181,10 @@ nav:
     - Advanced concepts:
       - Syntax sugar: scala/advanced/notes1.md 
       - Pattern Matching: scala/advanced/notes2.md
-
+      - PAF: scala/advanced/notes3.md
+      - Lazy evaluation: scala/advanced/notes4.md
+      - Monads: scala/advanced/notes5.md
+      
   - Distributed Systems:
     - Kafka: distributed-systems/kafka/notes1.md 
 extra_css:

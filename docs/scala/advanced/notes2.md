@@ -1,4 +1,6 @@
-## Pattern matching (apply, unapply)
+## Pattern matching (apply, unapply) 
+
+**LEK. 4**
 
 Nadpisanie metody `apply` w obiekcie towarzyszącym 
 
@@ -35,3 +37,5 @@ person() // returns "not allowed to drink"
 ```
 
 To nadpisanie metody `apply` określa zachowanie obiektu podczas wywołania. 
+
+Możemy właściwie dziedziczyć po funkcji o dowolnej krotności argumentów. 
