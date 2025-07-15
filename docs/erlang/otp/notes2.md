@@ -1,4 +1,3 @@
-## Supervisor 
 
 Przykładowy supervisor:
 ```erlang

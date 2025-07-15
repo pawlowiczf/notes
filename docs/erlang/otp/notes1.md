@@ -1,4 +1,3 @@
-## Sygnały, przechwytywanie zakończenia
 
 Sygnały EXIT, od procesów innych niż rodzic, można obsługiwać w funkcji `handle-info`.
 ```erlang
