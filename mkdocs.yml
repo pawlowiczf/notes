@@ -174,8 +174,8 @@ nav:
   
   - Erlang:
     - OTP: erlang/otp/notes1.md 
-    - 1: erlang/otp/notes2.md
-
+    - Supervisor: erlang/otp/notes2.md 
+    
   - Scala:
     - "": scala/index.md
     - Advanced concepts:
