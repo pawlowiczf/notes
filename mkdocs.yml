@@ -163,6 +163,7 @@ nav:
       - Docker Compose : devops/docker/notes2.md     
     - Kubernetes:
       - Basic commands: devops/kubernetes/notes1.md
+      - Services: devops/kubernetes/notes2.md
 
   - Network:
     - Network: network/index.md
