@@ -24,6 +24,6 @@ env:
 # creates an environment variable named FRUITS with the value taken from the fruits key in the fruits ConfigMap
 ```
 
-!!! note info title="Aktualizacje zmiennych środowiskowych"
+!!! note info "Aktualizacje zmiennych środowiskowych"
     Zmiana wartości w ConfigMapie, która jest używana, jako zmienna środowiskowa, nie powoduje zmiany tej zmiennej w już działającym podzie (w przeciwieństwie do zwykłych danych). Można zrestartować pody, wywołując: `kubectl rollout restart deployment/deployment-name`
 
