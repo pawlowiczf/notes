@@ -1,4 +1,3 @@
-## Rollouts 
 
 Kubernetes umożliwia wprowadzanie zmian bez przerwy w działaniu aplikacji. Gdy pojawia się nowa wersja, tworzy nowego poda i usuwa starego - jest to zatem taki proces iteracyjny, aż zostaną same nowe pody. 
 

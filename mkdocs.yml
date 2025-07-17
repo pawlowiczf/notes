@@ -165,6 +165,7 @@ nav:
       - Basic commands: devops/kubernetes/notes1.md
       - Services: devops/kubernetes/notes2.md
       - Rollouts: devops/kubernetes/notes3.md 
+      - ConfigMap: devops/kubernetes/notes4.md 
 
   - Network:
     - Network: network/index.md
