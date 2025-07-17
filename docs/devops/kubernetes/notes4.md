@@ -25,5 +25,5 @@ env:
 ```
 
 !!! note info "Aktualizacje zmiennych środowiskowych"
-    Zmiana wartości w ConfigMapie, która jest używana, jako zmienna środowiskowa, nie powoduje zmiany tej zmiennej w już działającym podzie (w przeciwieństwie do zwykłych danych). Można zrestartować pody, wywołując: `kubectl rollout restart deployment/deployment-name`
+    Zmiana wartości w ConfigMapie, której zawartość jest używana, jako zmienna środowiskowa, nie powoduje zmiany tej zmiennej w już działającym podzie (w przeciwieństwie do zwykłych danych). Można zrestartować pody, wywołując: `kubectl rollout restart deployment/deployment-name` - wtedy zmiany będą widoczne.
 
