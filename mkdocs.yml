@@ -178,6 +178,7 @@ nav:
   - Erlang:
     - Signals/exit trapping: erlang/otp/notes1.md 
     - Supervisor: erlang/otp/notes2.md 
+    - Application: erlang/otp/notes3.md
     
   - Scala:
     - "": scala/index.md
