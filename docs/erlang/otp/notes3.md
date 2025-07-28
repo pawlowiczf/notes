@@ -17,7 +17,7 @@ Folder `/ebin` przechowuje skompilowane pliki, `include/` pliki nagłówkowe `.h
 
 Aby uprościć pracę z wieloma plikami, można dodać plik `Emakefile`, który informuje kompilator, w jaki sposób kompilować i gdzie umieszczać pliki.
 
-```title = "Emakefile"
+```erlang title="Emakefile"
 {'src/*', [
     debug_info,
     {i, "src"},
