@@ -35,3 +35,20 @@ erl -pa ebin/
 erl
     make:all([load])
 ```
+
+# Plik aplikacji 
+
+Trzeba też dodać plik aplikacji. Umieszcza się w katalogu i nazywa: 
+- katalog `ebin/`, nazwa `<yourapp>.app`
+- katalog `src/`, nazwa `<myapp>.app.src` 
+
+Struktura pliku jest następująca:
+```erlang
+{application, ppool, [
+    {vsn, "1.0.0"},
+    {modules, [ppool, ppool_serv, ppool_sup, ppool_supersup, ppool_worker_sup]},
+    {registered, [ppool]},
+    {mod, {ppool, []}},
+    {env, [{Key, Val}]}
+]}.
+```
