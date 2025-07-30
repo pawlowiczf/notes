@@ -108,4 +108,9 @@ secrets:
         file: db_root_password.txt 
 ```
 
-Sekrety mogą też być stworzone 'w locie', na podstawie wartości zmiennej środowiskowej.
+Sekrety mogą też być stworzone 'w locie', na podstawie wartości zmiennej środowiskowej:
+```yaml
+secrets:
+    npm_token:
+        environment: NPM_TOKEN
+```
