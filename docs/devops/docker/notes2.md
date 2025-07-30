@@ -1,5 +1,6 @@
+Informacje do `docker compose`: `https://docs.docker.com/compose/how-tos/project-name/`
 
-### Podstawowe informacje 
+## Podstawowe informacje 
 
 Stwórz plik `docker-compose.yml`. Prosty przykładowy plik wygląda następująco:
 
@@ -48,7 +49,7 @@ docker compose start
 docker compose down 
 ```
 
-### Zmienne środowiskowe 
+## Zmienne środowiskowe 
 
 Docker Compose szuka pliku `.env` - eksportuje znajdujące się tam zmienne środowiskowe. Można też jawnie przekazać scieżkę do pliku:
 ```sh
@@ -62,3 +63,49 @@ run: |
     export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
     docker compose up -d
 ```
+
+## Ustawianie zmiennych środowiskowych 
+```yaml
+# in map form
+environment:
+    DEBUG: "true"
+
+# in list form 
+environment:
+    - DEBUG=true 
+
+# takes value from shell environment, gives warning if value is not present
+environment:
+    - DEBUG=${DEBUG]}
+```
+
+```yaml
+services:
+    webapp:
+        env_file: "webapp.env"
+        env_file:
+            - "webapp.env"
+            - ...
+```
+
+Wypisanie zmiennych środowiskowych w kontenerze: `docker compose run <service_name> env`
+
+## Secrets
+
+Sekrety to dane, które są dodawane do katalogu `/run/secrets/<secret_name>` we wnętrzu kontenera. 
+
+```yaml
+services:
+    db:
+        secrets:
+            - db_root_password
+            - db_password
+
+secrets:
+    db_password:
+        file: db_password.txt
+    db_root_password:
+        file: db_root_password.txt 
+```
+
+Sekrety mogą też być stworzone 'w locie', na podstawie wartości zmiennej środowiskowej.
