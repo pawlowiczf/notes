@@ -169,6 +169,7 @@ nav:
     - Notes:
       - Github Actions workflows: devops/notes/notes1.md
       - Docker/Docker compose architecture: devops/notes/notes2.md
+      - Schema repository/manager: devops/notes/notes3.md
   - Network:
     - Network: network/index.md
     - Firewalls: network/bsk/notes1.md 
