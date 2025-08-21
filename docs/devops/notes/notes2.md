@@ -34,7 +34,7 @@ Lista plików:
 - [Main docker-compose.yaml](docker-structure/docker-compose-main.yaml)
 - [Local docker-compose.yaml](docker-structure/docker-compose-local.yml)
 - [Dockerfile](docker-structure/Dockerfile)
-- [.env](docker-structure/.env)
+- [.env](docker-structure/env.txt)
 - [database-env.txt](docker-structure/database-env.txt)
 - [database-password.txt](docker-structure/database-password.txt)
 - [app-env.txt](docker-structure/app-env.txt)
