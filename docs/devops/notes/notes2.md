@@ -38,6 +38,7 @@ Lista plików:
 - [database-env.txt](docker-structure/database-env.txt)
 - [database-password.txt](docker-structure/database-password.txt)
 - [app-env.txt](docker-structure/app-env.txt)
+- [pom.xml](docker-structure/pom.xml)
 
 ```properties title="application.properties"
 spring.application.name=Product service
