@@ -3,4 +3,4 @@ Jeśli korzystamy z GCP Artifact Registry, to trzeba stworzyć konto serwisowe, 
 
 
 1. [Workflow for testing Java service](files/build-test-java-project.yaml)
-2. [Workflow for building/deploying Java service](files/build-test-java-project.yaml)
+2. [Workflow for building/deploying Java service](files/build-java-deploy-gcp.yaml)
