@@ -178,6 +178,7 @@ nav:
     - Remote access: network/bsk/notes4.md
     - Generic Routing Encapsulation (GRE): network/vpn/notes1.md
     - IPSec: network/vpn/notes2.md
+    - eBGP: network/vpn/notes3.md
     - Other: network/bsk/notes5.md
 
   - Erlang:
