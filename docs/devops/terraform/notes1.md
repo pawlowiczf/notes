@@ -1,6 +1,6 @@
 ```sh
-aws configure --profile TerraformAgent
-aws sts get-caller-identity --profile TerraformAgent
+aws configure --profile terraform-pc
+aws sts get-caller-identity --profile terraform-pc
 ```
 
 ```sh
