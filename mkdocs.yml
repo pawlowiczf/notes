@@ -166,6 +166,9 @@ nav:
       - Services: devops/kubernetes/notes2.md
       - Rollouts: devops/kubernetes/notes3.md 
       - ConfigMap: devops/kubernetes/notes4.md 
+    - Terraform:
+      - AWS Configuration: devops/terraform/notes1.md
+      - Basics: devops/terraform/notes2.md
     - Notes:
       - Github Actions workflows: devops/notes/notes1.md
       - Docker/Docker compose architecture: devops/notes/notes2.md
