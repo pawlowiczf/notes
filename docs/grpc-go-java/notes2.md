@@ -46,15 +46,18 @@ protobuf {
 ```
 
 W plikach Proto możemy dodać opcję:
-```
+```proto
+// Sluzy do grupowania procedur, np. w narzedziu EvansCLI
+package product.v1;
+
 // Nazwa pakietu dla wygenerowanych plików Java
 option java_package = "com.pcbook.pb";
 
 // Dzieli wygenerowane pliki, aby były czytelniesze
 option java_multiple_files = true;
 
-// Sluzy do grupowania procedur, np. w narzedziu EvansCLI
-package product.v1;
+// Nazwa wygenerowanej klasy
+option java_outer_classname = "ProductProto";
 ```
 
 Po kliknięciu opcji `Build` projektu, wszystkie pliki `.proto`, **umieszczone w folderze `src/main/proto`** zostaną automatycznie skompilowane i umieszczone w odpowiednich folderach.

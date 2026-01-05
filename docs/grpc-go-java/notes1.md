@@ -3,7 +3,7 @@ title: gRPC setup in Go
 
 ---
 
-## Ustawienia początkowe - Go 
+## Ustawienia początkowe - Go
 
 Należy pobrać i zainstalować kompilator `Protoc`, następnie pluginy dla języka Go:
 ```
@@ -28,11 +28,11 @@ package pb;
 option go_package = "[project_name]/pb";
 
 message CPU {
-    string brand = 1; 
+    string brand = 1;
     string name  = 2;
-    uint32 number_cores   = 3; 
+    uint32 number_cores   = 3;
     uint32 number_threads = 4;
-    double min_ghz = 5;    
+    double min_ghz = 5;
     double max_ghz = 6;
 }
 ```
@@ -40,28 +40,28 @@ message CPU {
 
 Do kompilacji plików używamy polecenia:
 ```
-protoc 
-    --proto_path=proto // względna lokalizacja plików Proto 
+protoc
+    --proto_path=proto // względna lokalizacja plików Proto
     --go_out=pb --go_opt=paths=source_relative \ // miejsce generowania plików wiadomości
-    --go-grpc_out=pb --go-grpc_opt=paths=source_relative \ // miejsce generowania interfejsu klienta i serwera 
+    --go-grpc_out=pb --go-grpc_opt=paths=source_relative \ // miejsce generowania interfejsu klienta i serwera
     proto/*.proto // lokalizacja plików .proto
 ```
 
-## Zaawansowane struktury w plikach Proto 
+## Zaawansowane struktury w plikach Proto
 
 ```proto
 import "google/protobuf/timestamp.proto";
 
 message Laptop {
-    repeated GPU gpus = 6; 
+    repeated GPU gpus = 6;
     repeated Storage storages = 7;
-    
+
     oneof weight {
         double weight_kg = 10;
         double weight_lb = 11;
     }
 
-    google.protobuf.Timestamp updated_at = 14; 
+    google.protobuf.Timestamp updated_at = 14;
 }
 ```
 
@@ -71,4 +71,4 @@ import "google.golang.org/protobuf/types/known/timestamppb"
 updated_at := timestamppb.New(time.Now())
 ```
 
-Ogólnie, wszystkie rzeczy związane z `Protoc` są właśnie do znalezienia w tym repozytorium. 
+Ogólnie, wszystkie rzeczy związane z `Protoc` są właśnie do znalezienia w tym repozytorium.
