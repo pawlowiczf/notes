@@ -1,27 +1,27 @@
-Informacje do `docker compose`: `https://docs.docker.com/compose/how-tos/project-name/`
+Informacje o `docker compose`: `https://docs.docker.com/compose/how-tos/project-name/`
 
-## Podstawowe informacje 
+## Podstawowe informacje
 
-Stwórz plik `docker-compose.yml`. Prosty przykładowy plik wygląda następująco:
+Stwórz plik `compose.yml`. Prosty przykładowy plik wygląda następująco:
 
 ```yaml
 services:
     backend:
-        # sami budujemy obraz 
-        build: 
-            context: ./backend 
-            dockerfile: Dockerfile 
-        container_name: backend 
+        # sami budujemy obraz
+        build:
+            context: ./backend
+            dockerfile: Dockerfile
+        container_name: backend
         ports:
             - "8080:8080"
         environment:
             SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/backend-db
         depends_on:
             db:
-                condition: service_healthy 
-                restart: true 
+                condition: service_healthy
+                restart: true
         networks:
-            - app-network 
+            - app-network
 
     db:
         # korzystamy z gotowego obrazu
@@ -31,7 +31,7 @@ services:
             interval: 10s
             retries: 5
             start_period: 30s
-            timeout: 10s    
+            timeout: 10s
 
 networks:
     app-network:
@@ -39,17 +39,17 @@ networks:
 
 ```
 
-W celu startu wykonaj: `docker compose up -d`, gdzie flaga `-d` oznacza opcję `detach` - odpalenia w tle. 
+W celu startu wykonaj: `docker compose up -d`, gdzie flaga `-d` oznacza opcję `detach` - odpalenia w tle.
 
 Można też zatrzymać lub ponownie wystartować kontenery:
 ```sh
 docker compose stop
-docker compose start 
+docker compose start
 
-docker compose down 
+docker compose down
 ```
 
-## Zmienne środowiskowe 
+## Zmienne środowiskowe
 
 Docker Compose szuka pliku `.env` - eksportuje znajdujące się tam zmienne środowiskowe. Można też jawnie przekazać scieżkę do pliku:
 ```sh
@@ -64,15 +64,15 @@ run: |
     docker compose up -d
 ```
 
-## Ustawianie zmiennych środowiskowych 
+## Ustawianie zmiennych środowiskowych
 ```yaml
 # in map form
 environment:
     DEBUG: "true"
 
-# in list form 
+# in list form
 environment:
-    - DEBUG=true 
+    - DEBUG=true
 
 # takes value from shell environment, gives warning if value is not present
 environment:
@@ -92,7 +92,7 @@ Wypisanie zmiennych środowiskowych w kontenerze: `docker compose run <service_n
 
 ## Secrets
 
-Sekrety to dane, które są dodawane do katalogu `/run/secrets/<secret_name>` we wnętrzu kontenera. 
+Sekrety to dane, które są dodawane do katalogu `/run/secrets/<secret_name>` we wnętrzu kontenera.
 
 ```yaml
 services:
@@ -105,7 +105,7 @@ secrets:
     db_password:
         file: db_password.txt
     db_root_password:
-        file: db_root_password.txt 
+        file: db_root_password.txt
 ```
 
 Sekrety mogą też być stworzone 'w locie', na podstawie wartości zmiennej środowiskowej:

@@ -1,0 +1,17 @@
+
+
+
+```yaml
+services:
+  nexus:
+    image: sonatype/nexus3:latest
+    container_name: nexus
+    ports:
+      - "80:8081"
+    volumes:
+      - nexus-data:/nexus-data
+    restart: unless-stopped
+
+volumes:
+  nexus-data:
+```

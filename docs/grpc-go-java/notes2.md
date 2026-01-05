@@ -50,11 +50,14 @@ W plikach Proto możemy dodać opcję:
 // Nazwa pakietu dla wygenerowanych plików Java
 option java_package = "com.pcbook.pb";
 
-// Dzieli wygenerowane pliki, aby były czytelniesze 
-option java_multiple_files = true; 
+// Dzieli wygenerowane pliki, aby były czytelniesze
+option java_multiple_files = true;
+
+// Sluzy do grupowania procedur, np. w narzedziu EvansCLI
+package product.v1;
 ```
 
-Po kliknięciu opcji `Build` projektu, wszystkie pliki `.proto`, **umieszczone w folderze `src/main/proto`** zostaną automatycznie skompilowane i umieszczone w odpowiednich folderach. 
+Po kliknięciu opcji `Build` projektu, wszystkie pliki `.proto`, **umieszczone w folderze `src/main/proto`** zostaną automatycznie skompilowane i umieszczone w odpowiednich folderach.
 
 <hr />
 
@@ -73,7 +76,7 @@ sourceSets {
 }
 ```
 
-## Tworzenie przykładowych obiektów (messages) w Javie 
+## Tworzenie przykładowych obiektów (messages) w Javie
 Wygenerowany kod jest dość bogaty - umożliwia łatwe tworzenie obiektów, z pomocą wzorca `Builder`.
 
 ```java
@@ -94,4 +97,16 @@ private Timestamp timestampNow() {
         .setNanos(now.getNano())
         .build();
 }
+```
+
+## gRPC w Maven
+
+Korzystając ze Springa, integracja gRPC do projektu staje się dość prosta. Komponenty odpowiedzialne za definicję procedur oznacza się adnotacją `@GrpcService`. Spring automatycznie tworzy instancję tej klasy. Taki komponent musi dziedziczyć po odpowiednim, wygenerowanym pliku.
+
+```xml
+<dependency>
+    <groupId>net.devh</groupId>
+    <artifactId>grpc-spring-boot-starter</artifactId>
+    <version>2.15.0.RELEASE</version>
+</dependency>
 ```

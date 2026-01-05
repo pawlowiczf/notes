@@ -1,4 +1,4 @@
-# site_name: University notes 
+# site_name: University notes
 # theme:
 #   name: material
 
@@ -17,7 +17,7 @@
 #     - navigation.indexes
 #     - navigation.tracking
 #     #- navigation.expand
-#     - navigation.path  
+#     - navigation.path
 #     - toc.follow
 #     - search.suggest
 #     - search.highlight
@@ -40,7 +40,7 @@
 #   - md_in_html
 #   - attr_list
 #   - md_in_html
-  
+
 
 # # nav:
 # #   - Strona główna: index.md
@@ -70,7 +70,7 @@ theme:
     - navigation.footer
     - navigation.indexes
     - navigation.tracking
-    - navigation.path  
+    - navigation.path
     - toc.follow
     - search.suggest
     - search.highlight
@@ -109,7 +109,7 @@ markdown_extensions:
 nav:
   - "": index.md
 
-  - gRPC in Go/Java: 
+  - gRPC in Go/Java:
     - gRPC setup in Go: grpc-go-java/notes1.md
     - gRPC setup in Java: grpc-go-java/notes2.md
     - Serialization - Go: grpc-go-java/notes3.md
@@ -119,20 +119,19 @@ nav:
 
   - Java/Spring/Hibernate:
     - Java/Spring/Hibernate: java-hibernate-spring/index.md
-    - Databases: 
+    - Databases:
         - Content: java-hibernate-spring/db/index.md
         - Basic database operations/connections: java-hibernate-spring/db/notes1.md
         - Hibernate: java-hibernate-spring/db/notes2.md
         - Transactions: java-hibernate-spring/db/notes3.md
         - H2 database: java-hibernate-spring/db/notes4.md
-    - Spring: 
+    - Spring:
         - Content: java-hibernate-spring/spring/index.md
-        - Spring Boot: java-hibernate-spring/spring/spring_boot.md 
-        - Spring Core: java-hibernate-spring/spring/spring_core.md 
-        - Spring Hibernate: java-hibernate-spring/spring//spring_hibernate.md 
-        - Spring REST: java-hibernate-spring/spring/spring_rest.md 
+        - Spring Boot: java-hibernate-spring/spring/spring_boot.md
+        - Spring Core: java-hibernate-spring/spring/spring_core.md
+        - Spring Hibernate: java-hibernate-spring/spring//spring_hibernate.md
+        - Spring REST: java-hibernate-spring/spring/spring_rest.md
         - Spring Exceptions: java-hibernate-spring/spring/4_spring_exceptions.md
-        - Spring REST Data: java-hibernate-spring/spring/5_spring_rest_data.md 
         - Swagger: java-hibernate-spring/spring/6_swagger.md
     - Spring security:
         - Content: java-hibernate-spring/spring-security/index.md
@@ -144,39 +143,42 @@ nav:
       - Content: go/basics/index.md
       - Net/HTTP: go/basics/1_net_http.md
   - Rust:
-    - Rust: rust/index.md 
+    - Rust: rust/index.md
     - Basics:
       - Ownership: rust/basics/notes1.md
       - Object oriented programming: rust/basics/notes2.md
-      - Generics/Pointers: rust/basics/notes3.md 
+      - Generics/Pointers: rust/basics/notes3.md
       - Lifespan: rust/basics/notes4.md
-      - Enums: rust/basics/notes5.md 
+      - Enums: rust/basics/notes5.md
       - Error handling: rust/basics/notes6.md
-      - Collections: rust/basics/notes7.md 
-      
+      - Collections: rust/basics/notes7.md
+
   - DevOps:
-    - DevOps: devops/index.md 
+    - DevOps: devops/index.md
     - Jenkins:
-      - Basic configuration: devops/jenkins/notes1.md 
+      - Basic configuration: devops/jenkins/notes1.md
     - Docker:
-      - Basics: devops/docker/notes1.md 
-      - Docker Compose : devops/docker/notes2.md     
+      - Basics: devops/docker/notes1.md
+      - Docker Compose : devops/docker/notes2.md
+      - Docker Compose files: devops/docker/notes3.md
     - Kubernetes:
       - Basic commands: devops/kubernetes/notes1.md
       - Services: devops/kubernetes/notes2.md
-      - Rollouts: devops/kubernetes/notes3.md 
-      - ConfigMap: devops/kubernetes/notes4.md 
+      - Rollouts: devops/kubernetes/notes3.md
+      - ConfigMap: devops/kubernetes/notes4.md
     - Terraform:
       - AWS Configuration: devops/terraform/notes1.md
       - Basics: devops/terraform/notes2.md
+    - Schema registry/Nexus:
+      - Setup: devops/nexus/notes1.md
+    - Github Actions:
+      - Common templates: devops/github-actions/notes1.md
     - Notes:
-      - Github Actions workflows: devops/notes/notes1.md
-      - Docker/Docker compose architecture: devops/notes/notes2.md
-      - Schema repository/manager: devops/notes/notes3.md
+
   - Network:
     - Network: network/index.md
-    - Firewalls: network/bsk/notes1.md 
-    - Private vlans/HSRP: network/bsk/notes2.md 
+    - Firewalls: network/bsk/notes1.md
+    - Private vlans/HSRP: network/bsk/notes2.md
     - GLBP: network/bsk/notes3.md
     - Remote access: network/bsk/notes4.md
     - Generic Routing Encapsulation (GRE): network/vpn/notes1.md
@@ -185,20 +187,20 @@ nav:
     - Other: network/bsk/notes5.md
 
   - Erlang:
-    - Signals/exit trapping: erlang/otp/notes1.md 
-    - Supervisor: erlang/otp/notes2.md 
+    - Signals/exit trapping: erlang/otp/notes1.md
+    - Supervisor: erlang/otp/notes2.md
     - Application: erlang/otp/notes3.md
-    
+
   - Scala:
     - "": scala/index.md
     - Advanced concepts:
-      - Syntax sugar: scala/advanced/notes1.md 
+      - Syntax sugar: scala/advanced/notes1.md
       - Pattern Matching: scala/advanced/notes2.md
       - PAF: scala/advanced/notes3.md
       - Lazy evaluation: scala/advanced/notes4.md
       - Monads: scala/advanced/notes5.md
-      
+
   - Distributed Systems:
-    - Kafka: distributed-systems/kafka/notes1.md 
+    - Kafka: distributed-systems/kafka/notes1.md
 extra_css:
   - stylesheets/extra.css

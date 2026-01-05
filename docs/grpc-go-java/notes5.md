@@ -4,12 +4,12 @@ title: Unary RPC - Go
 #   - toc
 ---
 
-## Tworzenie interfejsu serwera i klienta 
+## Tworzenie interfejsu serwera i klienta
 
 Tworzymy serwis RPC w pliku np. `laptop_service.proto`:
 ```proto
 message CreateLaptopRequest {
-    Laptop laptop = 1; 
+    Laptop laptop = 1;
 }
 
 message CreateLaptopResponse {
@@ -22,8 +22,8 @@ service LaptopService {
 ```
 
 Musimy stworzyć serwer, który:
-1. Implementuje interfejs wygenerowanego serwisu 
-2. Embeduje `pb.UnimplementedLaptopServiceServer` dla kompatybilności 
+1. Implementuje interfejs wygenerowanego serwisu
+2. Embeduje `pb.UnimplementedLaptopServiceServer` dla kompatybilności
 
 Do zwracania błędów używa się pakietów `status` oraz `codes`. Przykładowo:
 ```go
@@ -31,13 +31,14 @@ return nil, status.Errorf(codes.InvalidArgument, "laptop ID is not a valid UUID:
 return nil, status.Errorf(codes.Internal, ...)
 ```
 
-## Uruchomienie i nasłuchiwanie przez serwer 
+## Uruchomienie i nasłuchiwanie przez serwer
 Schemat wygląda następująco:
-1. Stwórz instację struktury, która implementuje interfejs stworzonego serwisu RPC 
-2. Stwórz serwer GRPC  
-3. Zarejestruj strukturę do serwera GRPC 
-4. Stwórz obiekt `Listener`, który nasłuchuje na danym porcie 
-5. Przekaż serwerowi GRPC, aby wykorzystał danego `Listenera` 
+
+1. Stwórz instację struktury, która implementuje interfejs stworzonego serwisu RPC
+2. Stwórz serwer GRPC
+3. Zarejestruj strukturę do serwera GRPC
+4. Stwórz obiekt `Listener`, który nasłuchuje na danym porcie
+5. Przekaż serwerowi GRPC, aby wykorzystał danego `Listenera`
 
 Przykładowy kod:
 ```go
@@ -52,11 +53,11 @@ func main() {
 
 ```
 
-## Uruchomienie i połączenie klienta z serwerem 
+## Uruchomienie i połączenie klienta z serwerem
 Schemat wygląda następująco:
-1. Stwórz połączenie z serwerem GRPC, na danym adresie 
-2. Stwórz klienta, który będzie się z tym serwerem łączył 
-3. Wyślij odpowiednie zapytania 
+1. Stwórz połączenie z serwerem GRPC, na danym adresie
+2. Stwórz klienta, który będzie się z tym serwerem łączył
+3. Wyślij odpowiednie zapytania
 
 Przykładowy kod:
 ```go
@@ -77,9 +78,9 @@ func main() {
 }
 ```
 
-## Możliwe ulepszenia 
+## Możliwe ulepszenia
 <hr />
-Używaj RWMutex do częstych operacji odczytu i rzadkich operacji zapisu. 
+Używaj RWMutex do częstych operacji odczytu i rzadkich operacji zapisu.
 
 <hr />
 Wykorzystuj `context.WithTimeout` w kliencie:
@@ -88,14 +89,14 @@ ctx, cancel = context.WithTimeout(context.Background(), 5 * time.Second)
 defer cancel()
 ```
 
-W serwerze możemy wtedy sprawdzić, czy kontekst został anulowany lub został przekroczony ustawiony czas:    
+W serwerze możemy wtedy sprawdzić, czy kontekst został anulowany lub został przekroczony ustawiony czas:
 ```go
 // Sytacja, gdy program klienta zostanie np. przerwany (wykona się cancel())
 if ctx.Err() == context.Canceled {
     ...
 }
 
-// Sytuacja, gdy czas zostanie przekroczony 
+// Sytuacja, gdy czas zostanie przekroczony
 if ctx.Err() == context.DeadlineExceeded {
 
 }

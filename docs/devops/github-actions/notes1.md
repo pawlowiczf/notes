@@ -1,0 +1,109 @@
+
+
+```yaml
+name: Build and deploy Docker images to AWS ECR (Elastic Container Registry)
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: write
+
+env:
+    ECR_REGISTRY: ${{ secrets.ECR_ARTIFACT_REGISTRY }}
+    IMAGE_NAME: ecmsp-project/${{ github.event.repository.name }}
+
+jobs:
+    build_deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            -
+                name: Check out code
+                uses: actions/checkout@v3
+
+            -
+                name: Set up JDK 21
+                uses: actions/setup-java@v3
+                with:
+                    java-version: '21'
+                    distribution: 'temurin'
+                    cache: 'maven'
+
+            -
+                name: Update Maven snapshots
+                run: mvn -U dependency:resolve
+
+            -
+                name: Configure AWS credentials via OIDC
+                uses: aws-actions/configure-aws-credentials@v4
+                with:
+                  role-to-assume: arn:aws:iam::529236942244:role/github-actions-ecr
+                  aws-region: eu-central-1
+
+            -
+                name: Login to Amazon ECR
+                uses: aws-actions/amazon-ecr-login@v2
+
+            -
+                name: Release new version
+                id: release
+                run: |
+                  bash ./scripts/git_update.sh -v patch
+
+            -
+                name: Add app version (Optional)
+                run: echo ${{ steps.release.outputs.new-tag }} > version.txt
+
+            -
+                name: Build, tag, and push backend Docker image to AWS ECR
+                env:
+                    IMAGE_TAG: ${{ steps.release.outputs.new-tag }}
+                run: |
+                    docker build \
+                      -t $ECR_REGISTRY/$IMAGE_NAME:$IMAGE_TAG \
+                      -f ./Dockerfile .
+
+                    docker push $ECR_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+```
+
+Skrypt do aktualizowania wersji i tworzenia tagu znajduje się w [files/git_update.sh](files/git_update.sh).
+
+```yaml
+name: Build and run Java project
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+    workflow_dispatch:
+
+jobs:
+    build_test:
+        runs-on: ubuntu-latest
+        steps:
+            -
+                name: Checkout repository
+                uses: actions/checkout@v2
+
+            -
+                name: Set up JDK 21
+                uses: actions/setup-java@v3
+                with:
+                    java-version: '21'
+                    distribution: 'temurin'
+                    cache: 'maven'
+
+            -
+                name: Run tests with Maven
+                run: mvn clean test -U
+
+```
