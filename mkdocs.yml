@@ -173,7 +173,6 @@ nav:
       - Setup: devops/nexus/notes1.md
     - Github Actions:
       - Common templates: devops/github-actions/notes1.md
-    - Notes:
 
   - Network:
     - Network: network/index.md
