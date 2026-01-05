@@ -163,7 +163,6 @@ nav:
       - Docker Compose files: devops/docker/notes3.md
     - Kubernetes:
       - Basic commands: devops/kubernetes/notes1.md
-      - Services: devops/kubernetes/notes2.md
       - Rollouts: devops/kubernetes/notes3.md
       - ConfigMap: devops/kubernetes/notes4.md
     - Terraform:
@@ -200,6 +199,7 @@ nav:
       - Monads: scala/advanced/notes5.md
 
   - Distributed Systems:
+    - Distributed Systems: distributed-systems/index.md
     - Kafka: distributed-systems/kafka/notes1.md
 extra_css:
   - stylesheets/extra.css

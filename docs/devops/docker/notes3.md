@@ -1,4 +1,4 @@
-Podstawowe informacje o [Docker compose](./notes2.md)
+Podstawowe informacje o Docker Compose znajdują sie [tutaj](./notes2.md).
 
 W pracy nad mikroserwisami, potrzeba jest uruchomienia wielu serwisów jednocześnie oraz automatycznego, ponownego budowania obrazu w przypadku dokonania zmian w kodzie źródłowym. Najlepiej stworzyć jedno rezpozytorium do zarządzania konfiguracją i uruchomieniem systemu - w ten sposób zachowujemy `source of truth`. Ogólnie, plik `Dockerfile` powinien być zlokalizowany osobno, w każdym serwisie, zatem do stawiania systemu, wszystkie potrzebne serwisy powinny być dostępne. Proponuję poniższą strukturę katalogów:
 
@@ -11,7 +11,6 @@ configuration-service/
         ├── app-env.txt
         ├── database-password.txt
         ├── database-env.txt
-
 ```
 
 W pliku `.env` umieszcza się zmienne środowiskowe, które będą używane i interpolowane w pliku `compose.yml`.
@@ -24,6 +23,7 @@ PRODUCT_SERVICE_PORT=8400
 PRODUCT_SERVICE_DB_PORT=9400
 PRODUCT_SERVICE_GRPC_PORT=7400
 ...
+```
 
 ```yaml
 product-service:

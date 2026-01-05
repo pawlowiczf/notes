@@ -71,7 +71,7 @@ jobs:
                     docker push $ECR_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
 ```
 
-Skrypt do aktualizowania wersji i tworzenia tagu znajduje się w [files/git_update.sh](files/git_update.sh).
+Skrypt do aktualizowania wersji i tworzenia tagu znajduje się w [tutaj](files/git_update.sh).
 
 ```yaml
 name: Build and run Java project

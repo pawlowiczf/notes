@@ -90,7 +90,7 @@ services:
 
 Wypisanie zmiennych środowiskowych w kontenerze: `docker compose run <service_name> env`
 
-## Secrets
+## Sekrety
 
 Sekrety to dane, które są dodawane do katalogu `/run/secrets/<secret_name>` we wnętrzu kontenera.
 
